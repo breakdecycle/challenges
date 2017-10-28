@@ -27,7 +27,7 @@ def howManyAgentsToAdd(noOfCurrentAgents, callsTimes):
             max_agents = max_n
         time += 1
     
-    print('Runtime:', (tt.time() - start_time)*1000)
+    //print('Runtime:', (tt.time() - start_time)*1000)
 
     return max_agents - noOfCurrentAgents
 
@@ -43,7 +43,7 @@ def main(noOfCurrentAgents, callsTimes):
                     overlaps += 1
         max_agents = max(max_agents, overlaps)
     
-    print('Runtime:', (tt.time() - start_time)*1000)
+    //print('Runtime:', (tt.time() - start_time)*1000)
 
     return max_agents - noOfCurrentAgents
 
