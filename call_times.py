@@ -11,7 +11,11 @@ def howManyAgentsToAdd(noOfCurrentAgents, callsTimes):
     start_time = tt.time()
     start = min(call[0] for call in callsTimes)
     end = max(call[1] for call in callsTimes)
-
+    
+    startTimes = []
+    for call in callsTimes:
+        startTimes = startTimes.append(call[0])
+        
     def overlap(time, callTimes):
         n = 0
         for t in callTimes:
@@ -21,11 +25,10 @@ def howManyAgentsToAdd(noOfCurrentAgents, callsTimes):
 
     max_agents = noOfCurrentAgents
     time = start
-    while (time <= end):
+    for time in startTimes:
         max_n = overlap(time, callsTimes)
         if max_n > max_agents:
             max_agents = max_n
-        time += 1
     
     #print('Runtime:', (tt.time() - start_time)*1000)
 
